@@ -113,7 +113,7 @@ async fn post_payment_request(data: String) -> ApiResult<()> {
     let mut count = 0;
     let mut member = None;
     while member.is_none() {
-        if count >= 10 {
+        if count >= 60 {
             return Err(().into());
         }
 
